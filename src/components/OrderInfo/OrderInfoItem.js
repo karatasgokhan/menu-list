@@ -8,7 +8,7 @@ export default function OrderInfoItem (props) {
             {props.icon}
         </div>
         <span>{props.name}</span>
-        <span className='value'>{props.value} TL</span>
+        <span className='value'>{props.value} {props.name === 'Min. Tutar' ? 'TL' : 'dk'}</span>
     </div>
   )
 }

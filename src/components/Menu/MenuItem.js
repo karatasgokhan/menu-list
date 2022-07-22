@@ -19,7 +19,7 @@ export default function MenuItem (props) {
             </div>
         </div>
         <div className="menu-price-block">
-            <span>{props.data.ListPrice}</span>
+            <span>{props.data.ListPrice} TL</span>
         </div>
     </div>
   )

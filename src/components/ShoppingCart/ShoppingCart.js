@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
-export default function ShoppingCart () {
+export default function ShoppingCart (props) {
   return (
     <div className="shopping-cart-wrapper">
     <div className="shopping-cart-container">
@@ -11,7 +12,7 @@ export default function ShoppingCart () {
             <span>YEMEK SEPETİM</span>
         </div>
         <div className="shopping-cart-address">
-            <span>Şişli (Esentepe Mah. Plazalar)</span>
+            <span>{props.adress}</span>
         </div>
         <div className="shopping-cart-block">
             <div className="shopping-cart-item">
