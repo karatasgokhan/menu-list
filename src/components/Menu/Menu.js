@@ -1,76 +1,20 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
+import MenuItem from './MenuItem'
 
-export default function Menu () {
+export default function Menu (props) {
   return (
     <div className="menu-wrapper">
-            <div className="menu-head">
-                <p>Burgerler</p>
-            </div>
-        <div className="menu-info-container">
-            <div className="left-item">
-            <div className="add-block">
-                <div className="count-item">
-                    <input type="number" />
-                </div>
-                <div className="add-item">+</div>
-            </div>
-        <div className="menu-content-block">
-                <p className="menu-name">
-                    Classic American Cheeseburger
-                </p>
-                <p className="menu-description">
-                    Griddle smashed köfte, cheddar peyniri, marul, domates, soğan küpleri (Burger köfteleri, orta pişmiş olarak servis edilmektedir.)
-                </p>
+        <div className="menu-head">
+            <p>{props.data.DisplayName}</p>
         </div>
-        </div>
-        <div className="menu-price-block">
-            <span>17,50TL</span>
-        </div>
+        {
+            props.data.Products.map((item, index) => {
+              return (
+                    <MenuItem key={index} data={item}/>
+              )
+            })
+        }
     </div>
-    <div className="menu-info-container">
-        <div className="left-item">
-            <div className="add-block">
-                <div className="count-item">
-                    <input type="number" />
-                </div>
-                <div className="add-item">+</div>
-        </div>
-        <div className="menu-content-block">
-                <p className="menu-name">
-                    Classic American Cheeseburger
-                </p>
-                <p className="menu-description">
-                    Griddle smashed köfte, cheddar peyniri, marul, domates, soğan küpleri (Burger köfteleri, orta pişmiş olarak servis edilmektedir.)
-                </p>
-        </div>
-        </div>
-        <div className="menu-price-block">
-            <span>17,50TL</span>
-        </div>
-    </div>
-    <div className="menu-info-container">
-        <div className="left-item">
-            <div className="add-block">
-                <div className="count-item">
-                    <input type="number" />
-                </div>
-                <div className="add-item">
-                    +
-                </div>
-        </div>
-        <div className="menu-content-block">
-                <p className="menu-name">
-                    Classic American Cheeseburger
-                </p>
-                <p className="menu-description">
-                    Griddle smashed köfte, cheddar peyniri, marul, domates, soğan küpleri (Burger köfteleri, orta pişmiş olarak servis edilmektedir.)
-                </p>
-        </div>
-        </div>
-        <div className="menu-price-block">
-            <span>17,50TL</span>
-        </div>
-    </div>
-</div>
   )
 }
