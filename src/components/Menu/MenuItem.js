@@ -9,7 +9,7 @@ export default function MenuItem (props) {
         <div className="left-item">
             <div className="add-block">
                     <div className="count-item">
-                        <input type="text" />
+                        <input type="text" value={1}/>
                     </div>
                 <div className="add-item"><Plus/></div>
             </div>
