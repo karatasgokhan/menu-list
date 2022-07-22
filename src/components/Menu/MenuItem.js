@@ -9,9 +9,9 @@ export default function MenuItem (props) {
         <div className="left-item">
             <div className="add-block">
                     <div className="count-item">
-                        <input type="text" value={1}/>
+                        <input type="text" defaultValue={1}/>
                     </div>
-                <div className="add-item"><Plus/></div>
+                <button className="add-item"><Plus/></button>
             </div>
             <div className="menu-content-block">
                 <p className="menu-name">{props.data.DisplayName}</p>
