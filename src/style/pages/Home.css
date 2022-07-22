@@ -1,7 +1,13 @@
-.home {
-  color: red;
+.root {
+  display: flex;
+  margin: 104px 0 30px 0;
 }
 
-.home:hover {
-  color: chartreuse;
+.root .left-root {
+  margin: 0 10px 0 0;
+  max-width: 240px;
+}
+
+.root .right-root {
+  width: 100%;
 }
