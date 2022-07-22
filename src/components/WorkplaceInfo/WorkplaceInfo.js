@@ -4,6 +4,7 @@ import backgroundImage from '../../assets/img/Burger.png'
 import restaurantImage from '../../assets/img/restaurantLogo.png'
 
 import restaurantData from '../../data/restaurant.json'
+import Breadcrumb from '../Breadcrumb/Breadcrumb'
 import OrderInfo from '../OrderInfo/OrderInfo'
 
 import Score from '../Score/Score'
@@ -32,15 +33,7 @@ export default function WorkplaceInfo () {
                     </div>
                 </div>
             </div>
-            <div className="breadcrumb-block">
-                <div className="breadcrumb-item">
-                    <a href="/">İstanbul Yemek Siparişi</a>
-                </div>
-                <span>{'>'}</span>
-                <div className="breadcrumb-item">
-                    <a href="/">Burger</a>
-                </div>
-            </div>
+            <Breadcrumb/>
         </div>
    </>
   )
