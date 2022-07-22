@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+p{
+    margin: 0;
+}
+input:focus {
+    border: none !important;
+    outline-style: none;
+    box-shadow: none;
+    border-color: transparent;
+}
+input {
+    border: none;
+}
