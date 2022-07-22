@@ -1,1 +1,7 @@
-@import "./style/pages/home.scss";
+@import "./style/pages/Home.scss";
+
+@import "./style/components/Abstracts/Variables.scss";
+
+@import "./style/layout/DefaultLayout.scss";
+
+@import "./style/components/Header/Header.scss";
