@@ -1,15 +1,17 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 
+import Plus from '../../UI/Icons/Plus'
+
 export default function MenuItem (props) {
   return (
     <div className="menu-info-container">
         <div className="left-item">
             <div className="add-block">
                     <div className="count-item">
-                        <input type="number" />
+                        <input type="text" />
                     </div>
-                <div className="add-item">+</div>
+                <div className="add-item"><Plus/></div>
             </div>
             <div className="menu-content-block">
                 <p className="menu-name">{props.data.DisplayName}</p>

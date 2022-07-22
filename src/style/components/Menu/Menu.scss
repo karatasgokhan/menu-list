@@ -25,9 +25,10 @@
         .add-block{
           display: flex;
           align-items: flex-start;
+          height: 20px;
           .count-item{
             width: 27px;
-            height: 20px;
+            height: 100%;
             background: #FFFFFF;
             border: 1px solid #DCDCDC;
             box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.258823);
@@ -41,7 +42,15 @@
               }
             }
           }
-
+          .add-item{
+            width: 30px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(var(--darkGreen), 1);
+            border-radius: 2px;
+          }
         }
         .menu-content-block{
           .menu-name{

@@ -34,11 +34,12 @@
 .menu-wrapper .menu-info-container .left-item .add-block {
   display: flex;
   align-items: flex-start;
+  height: 20px;
 }
 
 .menu-wrapper .menu-info-container .left-item .add-block .count-item {
   width: 27px;
-  height: 20px;
+  height: 100%;
   background: #FFFFFF;
   border: 1px solid #DCDCDC;
   box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.258823);
@@ -53,6 +54,16 @@
 
 .menu-wrapper .menu-info-container .left-item .add-block .count-item input:focus {
   border: 0;
+}
+
+.menu-wrapper .menu-info-container .left-item .add-block .add-item {
+  width: 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(var(--darkGreen), 1);
+  border-radius: 2px;
 }
 
 .menu-wrapper .menu-info-container .left-item .menu-content-block .menu-name {
