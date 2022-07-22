@@ -3,17 +3,12 @@ import React from 'react'
 import backgroundImage from '../../assets/img/Burger.png'
 import restaurantImage from '../../assets/img/restaurantLogo.png'
 
-import Delivery from '../../UI/Icons/Delivery'
-import MinAmount from '../../UI/Icons/MinAmount'
-
 import restaurantData from '../../data/restaurant.json'
+import OrderInfo from '../OrderInfo/OrderInfo'
 
 import Score from '../Score/Score'
 
 export default function WorkplaceInfo () {
-  // eslint-disable-next-line no-undef
-  console.log('restaurantData', restaurantData)
-
   return (
    <>
        <div className="workplace-info-wrapper"
@@ -33,22 +28,7 @@ export default function WorkplaceInfo () {
                     </div>
                     <div className="workplace-info">
                         <Score speed={restaurantData.Speed} serving={restaurantData.Serving} flavour={restaurantData.Flavour}/>
-                        <div className="order-info-item">
-                            <div className="order-info">
-                                <div className="icon">
-                                    <MinAmount/>
-                                </div>
-                                <span>Min. Tutar</span>
-                                <span className='value'>50,00 TL</span>
-                            </div>
-                            <div className="order-info">
-                                <div className="icon">
-                                    <Delivery/>
-                                </div>
-                                <span>Servis Süresi</span>
-                                <span className='value'>20-30 dk.</span>
-                            </div>
-                        </div>
+                        <OrderInfo minimumPrice={restaurantData.MinimumPrice} deliveryTime={restaurantData.DeliveryTime}/>
                     </div>
                 </div>
             </div>
