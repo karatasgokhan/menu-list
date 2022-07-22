@@ -5,9 +5,15 @@ import restaurantImage from '../../assets/img/restaurantLogo.png'
 
 import Delivery from '../../UI/Icons/Delivery'
 import MinAmount from '../../UI/Icons/MinAmount'
-import Degree from '../../UI/Icons/Degree'
+
+import restaurantData from '../../data/restaurant.json'
+
+import Score from '../Score/Score'
 
 export default function WorkplaceInfo () {
+  // eslint-disable-next-line no-undef
+  console.log('restaurantData', restaurantData)
+
   return (
    <>
        <div className="workplace-info-wrapper"
@@ -22,27 +28,11 @@ export default function WorkplaceInfo () {
                 </div>
                 <div className="workplace-info-item">
                     <div className="workplace-info-head">
-                        <p>x-Force Burger & Pizza , Arnavut Köy İlçesi </p>
-                        <p>(Mustafa Kemal Paşa  Mah.)</p>
+                        <p>{restaurantData.DisplayName}</p>
+                        <p>({restaurantData.ShortAdress})</p>
                     </div>
                     <div className="workplace-info">
-                        <div className="score-item">
-                            <div className="degree">
-                                <Degree/>
-                            </div>
-                            <div className="score">
-                                <span className="head">Hız</span>
-                                <span className="point">8,7</span>
-                            </div>
-                            <div className="score">
-                                <span className="head">Servis</span>
-                                <span className="point">8,7</span>
-                            </div>
-                            <div className="score">
-                                <span className="head">Lezzet</span>
-                                <span className="point">8,7</span>
-                            </div>
-                        </div>
+                        <Score speed={restaurantData.Speed} serving={restaurantData.Serving} flavour={restaurantData.Flavour}/>
                         <div className="order-info-item">
                             <div className="order-info">
                                 <div className="icon">

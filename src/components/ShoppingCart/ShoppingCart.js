@@ -25,17 +25,6 @@ export default function ShoppingCart () {
                     <FontAwesomeIcon icon={faXmark} />
                 </div>
             </div>
-            <div className="shopping-cart-item">
-                <div className="text-item">
-                    <span className='menu-name'>Seçilmiş Menü (Kebap) 2</span>
-                    <span className='menu-description'>Günün Çorbası + Beğendili Kebap + Cola 2</span>
-                </div>
-                <div className="count-item">3</div>
-                <div className="price-item">36,6TL</div>
-                <div className="delete-item">
-                    <FontAwesomeIcon icon={faXmark} />
-                </div>
-            </div>
         </div>
         <div className="shopping-cart-total-block">
             <span>Toplam</span>
