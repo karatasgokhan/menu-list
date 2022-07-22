@@ -1,0 +1,24 @@
+.order-info-item {
+  display: flex;
+  align-items: center;
+}
+
+.order-info-item .order-info {
+  margin: 0 25px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.order-info-item .order-info span {
+  font-size: 12px;
+}
+
+.order-info-item .order-info span.value {
+  font-weight: 700;
+}
+
+.order-info-item .order-info:last-child {
+  margin: 0;
+}
