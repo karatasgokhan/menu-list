@@ -1,0 +1,70 @@
+.menu-wrapper {
+  border: 1px solid #E5E5E5;
+  margin: 27px 0 22px 0;
+}
+
+.menu-wrapper .menu-head {
+  padding: 15px;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.menu-wrapper .menu-head p {
+  font-weight: 700;
+  font-size: 16px;
+  color: #333;
+}
+
+.menu-wrapper .menu-info-container {
+  padding: 10px 15px;
+  border-bottom: 1px solid #E5E5E5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-wrapper .menu-info-container p, .menu-wrapper .menu-info-container span {
+  font-size: 12px;
+}
+
+.menu-wrapper .menu-info-container .left-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.menu-wrapper .menu-info-container .left-item .add-block {
+  display: flex;
+  align-items: flex-start;
+}
+
+.menu-wrapper .menu-info-container .left-item .add-block .count-item {
+  width: 27px;
+  height: 20px;
+  background: #FFFFFF;
+  border: 1px solid #DCDCDC;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.258823);
+  border-radius: 2px;
+}
+
+.menu-wrapper .menu-info-container .left-item .add-block .count-item input {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-wrapper .menu-info-container .left-item .add-block .count-item input:focus {
+  border: 0;
+}
+
+.menu-wrapper .menu-info-container .left-item .menu-content-block .menu-name {
+  color: var(--orangeText);
+  font-weight: 700;
+}
+
+.menu-wrapper .menu-info-container .menu-price-block span {
+  color: var(--orangeText);
+  font-weight: 700;
+}
+
+.menu-wrapper .menu-info-container:last-child {
+  border: 0;
+}
