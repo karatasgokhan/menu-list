@@ -1,19 +1,21 @@
-/* eslint-disable react/prop-types */
 import React, { useState } from 'react'
+
+import PropTypes from 'prop-types'
+
 import MenuItem from './MenuItem'
 
-export default function Menu (props) {
+export default function Menu ({ data }) {
   const [dataIndex, setDataIndex] = useState(-1)
   const [inputValue, setInputValue] = useState(1)
   console.log('dataIndex', dataIndex)
-  console.log('data', props.data.Products[dataIndex])
+  console.log('data', data.Products[dataIndex])
   console.log('value', inputValue)
   return (
     <div className="menu-wrapper">
       <div className="menu-head">
-        <p>{props.data.DisplayName}</p>
+        <p>{data.DisplayName}</p>
       </div>
-      {props.data.Products.map((item, index) => {
+      {data.Products.map((item, index) => {
         return (
           <MenuItem
             key={index}
@@ -28,4 +30,8 @@ export default function Menu (props) {
       })}
     </div>
   )
+}
+
+Menu.propTypes = {
+  data: PropTypes.any.isRequired
 }

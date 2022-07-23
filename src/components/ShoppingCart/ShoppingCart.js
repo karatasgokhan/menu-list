@@ -1,10 +1,11 @@
-/* eslint-disable react/prop-types */
 import React from 'react'
+
+import PropTypes from 'prop-types'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
-export default function ShoppingCart (props) {
+export default function ShoppingCart ({ adress }) {
   return (
     <div className="shopping-cart-wrapper">
       <div className="shopping-cart-container">
@@ -12,7 +13,7 @@ export default function ShoppingCart (props) {
           <span>YEMEK SEPETİM</span>
         </div>
         <div className="shopping-cart-address">
-          <span>{props.adress}</span>
+          <span>{adress}</span>
         </div>
         <div className="shopping-cart-block">
           <div className="shopping-cart-item">
@@ -41,4 +42,8 @@ export default function ShoppingCart (props) {
       </div>
     </div>
   )
+}
+
+ShoppingCart.propTypes = {
+  adress: PropTypes.string.isRequired
 }

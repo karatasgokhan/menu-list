@@ -1,20 +1,21 @@
-/* eslint-disable react/prop-types */
 import React from 'react'
+
+import PropTypes from 'prop-types'
 
 import Delivery from '../../UI/Icons/Delivery'
 import MinAmount from '../../UI/Icons/MinAmount'
 import OrderInfoItem from './OrderInfoItem'
 
-export default function OrderInfo (props) {
+export default function OrderInfo ({ minimumPrice, deliveryTime }) {
   const orderInfo = [
     {
       name: 'Min. Tutar',
-      value: props.minimumPrice,
+      value: minimumPrice,
       icon: <MinAmount />
     },
     {
       name: 'Servis Süresi',
-      value: props.deliveryTime,
+      value: deliveryTime,
       icon: <Delivery />
     }
   ]
@@ -32,4 +33,9 @@ export default function OrderInfo (props) {
       })}
     </div>
   )
+}
+
+OrderInfo.propTypes = {
+  minimumPrice: PropTypes.number.isRequired,
+  deliveryTime: PropTypes.number.isRequired
 }

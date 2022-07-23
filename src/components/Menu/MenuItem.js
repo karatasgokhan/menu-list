@@ -1,12 +1,12 @@
-/* eslint-disable react/prop-types */
 import React from 'react'
 
-import Plus from '../../UI/Icons/Plus'
+import PropTypes from 'prop-types'
 
-export default function MenuItem (props) {
-  console.log('props.dataindex inside', props.dataIndex)
-  console.log('index inside', props.index)
-  console.log('value inside', props.inputValue)
+import Plus from '../../UI/Icons/Plus'
+export default function MenuItem ({ data, index, setDataIndex, setInputValue, inputValue, dataIndex }) {
+  console.log('props.dataindex inside', dataIndex)
+  console.log('index inside', index)
+  console.log('value inside', inputValue)
 
   return (
     <div className="menu-info-container">
@@ -22,17 +22,26 @@ export default function MenuItem (props) {
           </div>
           <button
             className="add-item"
-            onClick={() => props.setDataIndex(props.index)}
+            onClick={() => setDataIndex(index)}
           >
             <Plus />
           </button>
         </div>
         <div className="menu-content-block">
-          <p className="menu-name">{props.data.DisplayName}</p>
-          <p className="menu-description">{props.data.Description}</p>
+          <p className="menu-name">{data.DisplayName}</p>
+          <p className="menu-description">{data.Description}</p>
         </div>
       </div>
-      <span className="menu-price-text">{props.data.ListPrice} TL</span>
+      <span className="menu-price-text">{data.ListPrice} TL</span>
     </div>
   )
+}
+
+MenuItem.propTypes = {
+  data: PropTypes.any.isRequired,
+  index: PropTypes.number.isRequired,
+  setDataIndex: PropTypes.any.isRequired,
+  setInputValue: PropTypes.any.isRequired,
+  inputValue: PropTypes.number.isRequired,
+  dataIndex: PropTypes.number.isRequired
 }

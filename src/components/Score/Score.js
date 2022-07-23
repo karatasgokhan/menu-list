@@ -1,22 +1,23 @@
-/* eslint-disable react/prop-types */
 import React from 'react'
+
+import PropTypes from 'prop-types'
 
 import Degree from '../../UI/Icons/Degree'
 import ScoreItem from './ScoreItem'
 
-export default function Score (props) {
+export default function Score ({ speed, serving, flavour }) {
   const score = [
     {
       name: 'Hız',
-      value: props.speed
+      value: speed
     },
     {
       name: 'Servis',
-      value: props.serving
+      value: serving
     },
     {
       name: 'Lezzet',
-      value: props.flavour
+      value: flavour
     }
   ]
 
@@ -30,4 +31,10 @@ export default function Score (props) {
       })}
     </div>
   )
+}
+
+Score.propTypes = {
+  speed: PropTypes.number.isRequired,
+  serving: PropTypes.number.isRequired,
+  flavour: PropTypes.number.isRequired
 }
