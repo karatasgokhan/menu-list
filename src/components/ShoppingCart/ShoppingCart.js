@@ -17,7 +17,7 @@ export default function ShoppingCart ({ adress }) {
 
   useEffect(() => {
     const totalPrice = basketData.reduce(
-      (pre, basket) => pre + basket?.amount * parseInt(basket?.data?.ListPrice),
+      (pre, basket) => pre + basket && basket.amount * parseInt(basket && basket.data && basket.data.ListPrice),
       0
     )
     setCost(totalPrice)
@@ -36,13 +36,13 @@ export default function ShoppingCart ({ adress }) {
         <div className="shopping-cart-address">
           <span>{adress}</span>
         </div>
-        {basketData?.length < 1
+        {basketData && basketData.length < 1
           ? (
           <EmptyShoppingCart />
             )
           : (
           <div className="shopping-cart-block">
-            {basketData?.map((item, index) => {
+            {basketData && basketData.map((item, index) => {
               return (
                 <ShoppingCartItem
                   key={index}
@@ -55,14 +55,14 @@ export default function ShoppingCart ({ adress }) {
             })}
           </div>
             )}
-        {basketData?.length > 0 && (
+        {basketData && basketData.length > 0 && (
           <div className="shopping-cart-total-block">
             <span>Toplam</span>
             <span>{cost} TL</span>
           </div>
         )}
       </div>
-      {basketData?.length > 0 && (
+      {basketData && basketData.length > 0 && (
         <div className="confirm-cart-container">
           <div className="confirm-cart-block">
             <span>SEPETİ ONAYLA</span>
