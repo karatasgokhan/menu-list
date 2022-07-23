@@ -8,11 +8,17 @@ import ShoppingCartItem from './ShoppingCartItem'
 export default function ShoppingCart ({ adress }) {
   const [message, setMessage] = useState('')
   const basketData = JSON.parse(localStorage.getItem('basket'))
+  const [cost, setCost] = useState('')
 
   const updatedFunc = (parameter) => {
     setMessage(parameter)
     console.log(message)
   }
+
+  useEffect(() => {
+    const totalPrice = basketData.reduce((pre, basket) => pre + (basket?.amount * parseInt(basket?.data?.ListPrice)), 0)
+    setCost(totalPrice)
+  }, [basketData])
 
   useEffect(() => {
     document.addEventListener('listener', updatedFunc)
@@ -48,7 +54,7 @@ export default function ShoppingCart ({ adress }) {
           basketData?.length > 0 &&
           <div className="shopping-cart-total-block">
           <span>Toplam</span>
-          <span>56,00TL</span>
+          <span>{cost} TL</span>
         </div>
         }
       </div>
