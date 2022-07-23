@@ -15,6 +15,9 @@ export default function Home () {
       </section>
       <section className="right-root">
         <WorkplaceInfo />
+        <section className="left-root mobil">
+        <ShoppingCart adress={restaurantData.AddressText} />
+      </section>
         {menuData.Menu.map((item, index) => {
           return <Menu key={index} data={item} />
         })}

@@ -17,28 +17,30 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .root {
-    position: relative;
-  }
   .root .left-root {
-    position: absolute;
-    top: 175px;
-    left: 0;
     width: 100%;
     max-width: 100%;
+    display: none;
   }
-  .root .left-root .shopping-cart-wrapper .shopping-cart-container .shopping-cart-block .shopping-cart-item {
-    justify-content: space-between;
+  .root .left-root .shopping-cart-wrapper .shopping-cart-container .shopping-cart-block .shopping-cart-item .text-item {
+    width: 90%;
   }
-  .root .right-root .workplace-info-wrapper {
-    margin: 0 0 256px 0;
+  .root .left-root .shopping-cart-wrapper .shopping-cart-container .shopping-cart-block .shopping-cart-item .count-item {
+    width: 1%;
+  }
+  .root .left-root .shopping-cart-wrapper .shopping-cart-container .shopping-cart-block .shopping-cart-item .price-item {
+    width: 7%;
+  }
+  .root .left-root .shopping-cart-wrapper .shopping-cart-container .shopping-cart-block .shopping-cart-item .delete-item {
+    width: 2%;
+  }
+  .root .left-root.mobil {
+    display: block;
+    margin: 16px 0 0 0;
   }
 }
 
 @media only screen and (max-width: 576px) {
-  .root .left-root {
-    top: 290px;
-  }
   .root .right-root .workplace-info-wrapper {
     background-image: none;
     background-color: #f4f4f4;

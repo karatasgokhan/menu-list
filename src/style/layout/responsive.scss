@@ -21,26 +21,33 @@
 
 @media only screen and (max-width: 768px) {
   .root {
-    position: relative;
     .left-root {
-      position: absolute;
-      top: 175px;
-      left: 0;
       width: 100%;
       max-width: 100%;
+      display: none;
       .shopping-cart-wrapper {
         .shopping-cart-container {
           .shopping-cart-block {
             .shopping-cart-item {
-              justify-content: space-between;
+              .text-item {
+                width: 90%;
+              }
+              .count-item {
+                width: 1%;
+              }
+              .price-item {
+                width: 7%;
+              }
+              .delete-item {
+                width: 2%;
+              }
             }
           }
         }
       }
-    }
-    .right-root {
-      .workplace-info-wrapper {
-        margin: 0 0 256px 0;
+      &.mobil {
+        display: block;
+        margin: 16px 0 0 0;
       }
     }
   }
@@ -48,9 +55,6 @@
 
 @media only screen and (max-width: 576px) {
   .root {
-    .left-root {
-      top: 290px;
-    }
     .right-root {
       .workplace-info-wrapper {
         background-image: none;
