@@ -30,6 +30,7 @@
 .menu-wrapper .menu-info-container .left-item {
   display: flex;
   align-items: flex-start;
+  margin: 0 16px 0 0;
 }
 
 .menu-wrapper .menu-info-container .left-item .add-block {
@@ -88,6 +89,7 @@
   color: var(--orangeText);
   font-weight: 700;
   margin: 3px 0 0 0;
+  white-space: nowrap;
 }
 
 .menu-wrapper .menu-info-container:last-child {

@@ -1,0 +1,81 @@
+@media only screen and (max-width: 1400px) {
+  .default-layout-root {
+    padding: 0 32px;
+  }
+  .header-root {
+    padding: 0 32px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 992px) {
+  .default-layout-root {
+    padding: 0 16px;
+  }
+  .header-root {
+    padding: 0 16px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .root {
+    position: relative;
+    .left-root {
+      position: absolute;
+      top: 175px;
+      left: 0;
+      width: 100%;
+      max-width: 100%;
+      .shopping-cart-wrapper {
+        .shopping-cart-container {
+          .shopping-cart-block {
+            .shopping-cart-item {
+              justify-content: space-between;
+            }
+          }
+        }
+      }
+    }
+    .right-root {
+      .workplace-info-wrapper {
+        margin: 0 0 256px 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .root {
+    .left-root {
+      top: 290px;
+    }
+    .right-root {
+      .workplace-info-wrapper {
+        background-image: none;
+        background-color: #f4f4f4;
+        min-height: 245px;
+        .workplace-info-block {
+          flex-direction: column;
+          align-items: flex-start;
+          .workplace-info-item {
+            .workplace-info {
+              flex-direction: column;
+              align-items: flex-start;
+              .score-item {
+                margin: 0 0 12px 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 441px) {
+}
+
+@media only screen and (max-width: 390px) {
+}
