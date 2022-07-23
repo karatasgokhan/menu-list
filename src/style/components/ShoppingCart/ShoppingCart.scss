@@ -16,6 +16,18 @@
         font-size: 12px;
       }
     }
+    .empty-shopping-cart{
+      padding: 20px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      border: 1px solid #dcdcdc;
+      span{
+        font-size: 12px;
+        font-weight: 700;
+        margin: 0 0 0 10px;
+      }
+    }
     .shopping-cart-block {
       border: 1px solid #dcdcdc;
       border-top: 0;

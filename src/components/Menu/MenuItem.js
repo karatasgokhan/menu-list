@@ -1,12 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import PropTypes from 'prop-types'
 
+import useExternalHookAsState from '../../helper/useExternalHookAsState'
+
 import Plus from '../../UI/Icons/Plus'
-export default function MenuItem ({ data, index, setDataIndex, setInputValue, inputValue, dataIndex }) {
-  console.log('props.dataindex inside', dataIndex)
-  console.log('index inside', index)
-  console.log('value inside', inputValue)
+export default function MenuItem ({ data }) {
+  const [message, setMessage] = useExternalHookAsState()
+  const [inputValue, setInputValue] = useState(1)
+  let currentData = []
+
+  const addBasket = () => {
+    const addItem = { data, amount: parseInt(inputValue) }
+    const storageData = JSON.parse(localStorage.getItem('basket'))
+    if (storageData) {
+      currentData = storageData
+    }
+    const sameData = currentData.findIndex(
+      (f) => f.data?.ProductId === data?.ProductId
+    )
+    if (sameData > -1) {
+      currentData[sameData].amount += addItem.amount
+    } else {
+      currentData.push(addItem)
+    }
+    localStorage.setItem('basket', JSON.stringify(currentData))
+    const newEvent = new CustomEvent('listener', {})
+    document.dispatchEvent(newEvent)
+  }
 
   return (
     <div className="menu-info-container">
@@ -15,14 +36,16 @@ export default function MenuItem ({ data, index, setDataIndex, setInputValue, in
           <div className="count-item">
             <input
               type="text"
-              defaultValue={1}
-              onInput={() => console.log('On input')}
-              onChange={() => console.log('Change')}
+              defaultValue={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
             />
           </div>
           <button
             className="add-item"
-            onClick={() => setDataIndex(index)}
+            onClick={() => {
+              addBasket()
+              setMessage('' + message)
+            }}
           >
             <Plus />
           </button>
@@ -38,10 +61,5 @@ export default function MenuItem ({ data, index, setDataIndex, setInputValue, in
 }
 
 MenuItem.propTypes = {
-  data: PropTypes.any.isRequired,
-  index: PropTypes.number.isRequired,
-  setDataIndex: PropTypes.any.isRequired,
-  setInputValue: PropTypes.any.isRequired,
-  inputValue: PropTypes.number.isRequired,
-  dataIndex: PropTypes.number.isRequired
+  data: PropTypes.any.isRequired
 }

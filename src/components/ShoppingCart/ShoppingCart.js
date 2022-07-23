@@ -1,11 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import PropTypes from 'prop-types'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import EmptyShoppingCart from './EmptyShoppingCart'
+import ShoppingCartItem from './ShoppingCartItem'
 
 export default function ShoppingCart ({ adress }) {
+  const [message, setMessage] = useState('')
+  const basketData = JSON.parse(localStorage.getItem('basket'))
+
+  const updatedFunc = (parameter) => {
+    setMessage(parameter)
+    console.log(message)
+  }
+
+  useEffect(() => {
+    document.addEventListener('listener', updatedFunc)
+  }, [])
+
   return (
     <div className="shopping-cart-wrapper">
       <div className="shopping-cart-container">
@@ -15,31 +27,40 @@ export default function ShoppingCart ({ adress }) {
         <div className="shopping-cart-address">
           <span>{adress}</span>
         </div>
-        <div className="shopping-cart-block">
-          <div className="shopping-cart-item">
-            <div className="text-item">
-              <span className="menu-name">Seçilmiş Menü (Kebap)</span>
-              <span className="menu-description">
-                Günün Çorbası + Beğendili Kebap + Cola
-              </span>
-            </div>
-            <div className="count-item">2</div>
-            <div className="price-item">46,6TL</div>
-            <div className="delete-item">
-              <FontAwesomeIcon icon={faXmark} />
-            </div>
+        {
+          basketData?.length < 1
+            ? <EmptyShoppingCart/>
+            : <div className="shopping-cart-block">
+            {basketData?.map((item, index) => {
+              return (
+                <ShoppingCartItem
+                  key={index}
+                  item={item}
+                  index={index}
+                  basketData={basketData}
+                  setMessage={setMessage}
+                />
+              )
+            })}
           </div>
-        </div>
-        <div className="shopping-cart-total-block">
+        }
+        {
+          basketData?.length > 0 &&
+          <div className="shopping-cart-total-block">
           <span>Toplam</span>
           <span>56,00TL</span>
         </div>
+        }
       </div>
-      <div className="confirm-cart-container">
-        <div className="confirm-cart-block">
-          <span>SEPETİ ONAYLA</span>
-        </div>
-      </div>
+      {
+                  basketData?.length > 0 &&
+                  <div className="confirm-cart-container">
+                  <div className="confirm-cart-block">
+                    <span>SEPETİ ONAYLA</span>
+                  </div>
+                </div>
+      }
+
     </div>
   )
 }
