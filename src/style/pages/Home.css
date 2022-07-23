@@ -6,6 +6,7 @@
 .root .left-root {
   margin: 0 10px 0 0;
   max-width: 240px;
+  min-width: 240px;
 }
 
 .root .right-root {
