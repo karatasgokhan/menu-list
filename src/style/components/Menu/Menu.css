@@ -1,11 +1,11 @@
 .menu-wrapper {
-  border: 1px solid #E5E5E5;
+  border: 1px solid #e5e5e5;
   margin: 27px 0 22px 0;
 }
 
 .menu-wrapper .menu-head {
   padding: 15px;
-  border-bottom: 1px solid #E5E5E5;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .menu-wrapper .menu-head p {
@@ -16,14 +16,15 @@
 
 .menu-wrapper .menu-info-container {
   padding: 10px 15px;
-  border-bottom: 1px solid #E5E5E5;
+  border-bottom: 1px solid #e5e5e5;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
-.menu-wrapper .menu-info-container p, .menu-wrapper .menu-info-container span {
-  font-size: 12px;
+.menu-wrapper .menu-info-container p,
+.menu-wrapper .menu-info-container span {
+  font-size: 11px;
 }
 
 .menu-wrapper .menu-info-container .left-item {
@@ -41,8 +42,8 @@
 .menu-wrapper .menu-info-container .left-item .add-block .count-item {
   width: 27px;
   height: 100%;
-  background: #FFFFFF;
-  border: 1px solid #DCDCDC;
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
   box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.258823);
   border-radius: 2px;
   margin: 0 5px 0 0;
@@ -76,11 +77,17 @@
 .menu-wrapper .menu-info-container .left-item .menu-content-block .menu-name {
   color: var(--orangeText);
   font-weight: 700;
+  margin: 3px 0 4px 0;
 }
 
-.menu-wrapper .menu-info-container .menu-price-block span {
+.menu-wrapper .menu-info-container .left-item .menu-content-block .menu-description {
+  line-height: 16px;
+}
+
+.menu-wrapper .menu-info-container .menu-price-text {
   color: var(--orangeText);
   font-weight: 700;
+  margin: 3px 0 0 0;
 }
 
 .menu-wrapper .menu-info-container:last-child {

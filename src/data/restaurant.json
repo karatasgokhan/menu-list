@@ -1,11 +1,11 @@
 {
-    "Oid": "1594373",
-    "ShortAdress": "Nispetiye Cad.",
-    "AddressText": "Nispetiye Cad. No:57 Hisarüstü ",
-    "DeliveryTime": 30,
-    "DisplayName": "Yenice Cafe & Ev Yemekleri, Hisarüstü",
-    "Flavour": 8,
-    "Serving": 8,
-    "Speed": 8,
-    "MinimumPrice": 10
+  "Oid": "1594373",
+  "ShortAdress": "Nispetiye Cad.",
+  "AddressText": "Nispetiye Cad. No:57 Hisarüstü ",
+  "DeliveryTime": 30,
+  "DisplayName": "Yenice Cafe & Ev Yemekleri, Hisarüstü",
+  "Flavour": 8,
+  "Serving": 8,
+  "Speed": 8,
+  "MinimumPrice": 10
 }

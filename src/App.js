@@ -13,17 +13,17 @@ function App () {
   return (
     <BrowserRouter>
       <Header />
-    <Routes>
-      <Route
-        path={ROUTES.HOME}
-        element={
-          <DefaultLayout>
-            <Home />
-          </DefaultLayout>
-        }
-      />
-    </Routes>
-  </BrowserRouter>
+      <Routes>
+        <Route
+          path={ROUTES.HOME}
+          element={
+            <DefaultLayout>
+              <Home />
+            </DefaultLayout>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

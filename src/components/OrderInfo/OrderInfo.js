@@ -10,23 +10,26 @@ export default function OrderInfo (props) {
     {
       name: 'Min. Tutar',
       value: props.minimumPrice,
-      icon: <MinAmount/>
+      icon: <MinAmount />
     },
     {
       name: 'Servis Süresi',
       value: props.deliveryTime,
-      icon: <Delivery/>
+      icon: <Delivery />
     }
   ]
   return (
     <div className="order-info-item">
-        {
-            orderInfo.map((item, index) => {
-              return (
-                    <OrderInfoItem key={index} icon={item.icon} name={item.name} value={item.value}/>
-              )
-            })
-        }
+      {orderInfo.map((item, index) => {
+        return (
+          <OrderInfoItem
+            key={index}
+            icon={item.icon}
+            name={item.name}
+            value={item.value}
+          />
+        )
+      })}
     </div>
   )
 }

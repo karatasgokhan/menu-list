@@ -1,92 +1,92 @@
-.shopping-cart-wrapper{
-    .shopping-cart-container{
-      .shopping-cart-head{
-        padding: 10px;
-        background-color: rgba(var(--darkRed), 1);
-        span{
-          color: #fff;
-          font-size: 12px;
-          font-weight: 600;
-        }
+.shopping-cart-wrapper {
+  .shopping-cart-container {
+    .shopping-cart-head {
+      padding: 10px;
+      background-color: rgba(var(--darkRed), 1);
+      span {
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
       }
-      .shopping-cart-address{
-        padding: 10px;
-        background-color: rgba(var(--lightYellow), 1);
-        span{
-            font-size: 12px;
-        }
+    }
+    .shopping-cart-address {
+      padding: 10px;
+      background-color: rgba(var(--lightYellow), 1);
+      span {
+        font-size: 12px;
       }
-      .shopping-cart-block{
-        border: 1px solid #DCDCDC;
-        border-top: 0;
-        padding: 10px;
-        .shopping-cart-item{
-          margin: 0 0 10px 0;
-          display: flex;
-          align-items: center;
-          .text-item{
-            margin: 0 15px 0 0;
-            display: flex;
-            flex-direction: column;
-            span{
-              font-size: 13px;
-            }
-            .menu-name{
-              font-weight: 600;
-              color: var(--orangeText);
-            }
-          }
-          .count-item{
-            margin: 0 10px 0 0;
-            border: 1px solid;
-            padding: 2px 8px;
-            border-radius: 3px;
-            font-size: 12px;
-          }
-          .price-item{
-            margin: 0 10px 0 0;
-            font-size: 13px;
-          }
-          .delete-item{
-            padding: 2px 5px;
-            cursor: pointer;
-            svg{
-              path{
-                fill: var(--darkRedText)
-              }
-            }
-          }
-        }
-      }
-      .shopping-cart-total-block{
-        border: 1px solid #DCDCDC;
-        border-top: 0;
-        padding: 10px;
+    }
+    .shopping-cart-block {
+      border: 1px solid #dcdcdc;
+      border-top: 0;
+      padding: 10px;
+      .shopping-cart-item {
+        margin: 0 0 10px 0;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        span{
-          font-weight: 700;
-          font-size: 14px;
+        .text-item {
+          margin: 0 15px 0 0;
+          display: flex;
+          flex-direction: column;
+          span {
+            font-size: 11px;
+          }
+          .menu-name {
+            font-weight: 600;
+            color: var(--orangeText);
+          }
+        }
+        .count-item {
+          margin: 0 10px 0 0;
+          border: 1px solid;
+          padding: 2px 8px;
+          border-radius: 3px;
+          font-size: 11px;
+        }
+        .price-item {
+          margin: 0 10px 0 0;
+          font-size: 11px;
+        }
+        .delete-item {
+          padding: 2px 5px;
+          cursor: pointer;
+          svg {
+            path {
+              fill: var(--darkRedText);
+            }
+          }
         }
       }
     }
-    .confirm-cart-container{
+    .shopping-cart-total-block {
+      border: 1px solid #dcdcdc;
+      border-top: 0;
       padding: 10px;
-      background-color: #f4f4f4;
-      border-radius: 0 0 4px 4px;
-      .confirm-cart-block{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(var(--darkGreen), 1);
-        border-radius: 4px;
-        padding:  10px 0;
-        span{
-          color: #fff;
-          font-weight: 600;
-          font-size: 14px;
-        }
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span {
+        font-weight: 700;
+        font-size: 14px;
       }
     }
   }
+  .confirm-cart-container {
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 0 0 4px 4px;
+    .confirm-cart-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(var(--darkGreen), 1);
+      border-radius: 4px;
+      padding: 10px 0;
+      span {
+        color: #fff;
+        font-weight: 600;
+        font-size: 14px;
+      }
+    }
+  }
+}

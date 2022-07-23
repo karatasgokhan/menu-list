@@ -12,11 +12,12 @@
 }
 
 .order-info-item .order-info span {
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .order-info-item .order-info span.value {
   font-weight: 700;
+  margin: 3px 0 0 0;
 }
 
 .order-info-item .order-info:last-child {

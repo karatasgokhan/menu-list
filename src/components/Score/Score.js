@@ -22,16 +22,12 @@ export default function Score (props) {
 
   return (
     <div className="score-item">
-    <div className="degree">
-        <Degree/>
+      <div className="degree">
+        <Degree />
+      </div>
+      {score.map((item, index) => {
+        return <ScoreItem key={index} name={item.name} value={item.value} />
+      })}
     </div>
-    {
-        score.map((item, index) => {
-          return (
-            <ScoreItem key={index} name={item.name} value={item.value}/>
-          )
-        })
-    }
-</div>
   )
 }

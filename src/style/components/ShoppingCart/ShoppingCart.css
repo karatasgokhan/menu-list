@@ -19,7 +19,7 @@
 }
 
 .shopping-cart-wrapper .shopping-cart-container .shopping-cart-block {
-  border: 1px solid #DCDCDC;
+  border: 1px solid #dcdcdc;
   border-top: 0;
   padding: 10px;
 }
@@ -37,7 +37,7 @@
 }
 
 .shopping-cart-wrapper .shopping-cart-container .shopping-cart-block .shopping-cart-item .text-item span {
-  font-size: 13px;
+  font-size: 11px;
 }
 
 .shopping-cart-wrapper .shopping-cart-container .shopping-cart-block .shopping-cart-item .text-item .menu-name {
@@ -50,12 +50,12 @@
   border: 1px solid;
   padding: 2px 8px;
   border-radius: 3px;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .shopping-cart-wrapper .shopping-cart-container .shopping-cart-block .shopping-cart-item .price-item {
   margin: 0 10px 0 0;
-  font-size: 13px;
+  font-size: 11px;
 }
 
 .shopping-cart-wrapper .shopping-cart-container .shopping-cart-block .shopping-cart-item .delete-item {
@@ -68,7 +68,7 @@
 }
 
 .shopping-cart-wrapper .shopping-cart-container .shopping-cart-total-block {
-  border: 1px solid #DCDCDC;
+  border: 1px solid #dcdcdc;
   border-top: 0;
   padding: 10px;
   display: flex;
