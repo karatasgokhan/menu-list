@@ -16,10 +16,15 @@ export default function ShoppingCart ({ adress }) {
   }
 
   useEffect(() => {
-    const totalPrice = basketData.reduce(
-      (pre, basket) => pre + basket && basket.amount * parseInt(basket && basket.data && basket.data.ListPrice),
-      0
-    )
+    const totalPrice =
+      basketData &&
+      basketData.reduce(
+        (pre, basket) =>
+          pre + basket &&
+          basket.amount *
+            parseInt(basket && basket.data && basket.data.ListPrice),
+        0
+      )
     setCost(totalPrice)
   }, [basketData])
 
@@ -36,24 +41,25 @@ export default function ShoppingCart ({ adress }) {
         <div className="shopping-cart-address">
           <span>{adress}</span>
         </div>
-        {basketData && basketData.length < 1
+        {basketData && basketData.length > 0
           ? (
-          <EmptyShoppingCart />
+          <div className="shopping-cart-block">
+            {basketData &&
+              basketData.map((item, index) => {
+                return (
+                  <ShoppingCartItem
+                    key={index}
+                    item={item}
+                    index={index}
+                    basketData={basketData}
+                    setMessage={setMessage}
+                  />
+                )
+              })}
+          </div>
             )
           : (
-          <div className="shopping-cart-block">
-            {basketData && basketData.map((item, index) => {
-              return (
-                <ShoppingCartItem
-                  key={index}
-                  item={item}
-                  index={index}
-                  basketData={basketData}
-                  setMessage={setMessage}
-                />
-              )
-            })}
-          </div>
+          <EmptyShoppingCart />
             )}
         {basketData && basketData.length > 0 && (
           <div className="shopping-cart-total-block">

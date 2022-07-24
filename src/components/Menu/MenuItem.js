@@ -17,7 +17,7 @@ export default function MenuItem ({ data }) {
       currentData = storageData
     }
     const sameData = currentData.findIndex(
-      (f) => f.data && f.data.ProductId === data && data.ProductId
+      (f) => f.data.ProductId === data.ProductId
     )
     if (sameData > -1) {
       currentData[sameData].amount += addItem.amount
