@@ -108,6 +108,7 @@
 }
 
 .shopping-cart-wrapper .confirm-cart-container .confirm-cart-block {
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
