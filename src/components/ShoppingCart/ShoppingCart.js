@@ -18,13 +18,7 @@ export default function ShoppingCart ({ adress }) {
   useEffect(() => {
     const totalPrice =
       basketData &&
-      basketData.reduce(
-        (pre, basket) =>
-          pre + basket &&
-          basket.amount *
-            parseInt(basket && basket.data && basket.data.ListPrice),
-        0
-      )
+      basketData.reduce((pre, basket) => pre + basket.amount * parseInt(basket.data.ListPrice), 0)
     setCost(totalPrice)
   }, [basketData])
 
