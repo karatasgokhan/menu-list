@@ -1,0 +1,35 @@
+{
+  "name": "menu-list",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --no-source-maps"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
+    "@parcel/transformer-sass": "^2.6.2",
+    "parcel-bundler": "^1.12.5",
+    "react": ">=16.3",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0"
+  },
+  "browserslist": [
+    "last 2 firefox versions",
+    "last 2 chrome versions",
+    "last 2 edge versions",
+    "last 1 safari version",
+    "not dead"
+  ],
+  "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.30.1"
+  }
+}

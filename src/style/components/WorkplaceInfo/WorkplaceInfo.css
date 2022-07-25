@@ -1,0 +1,35 @@
+.workplace-info-wrapper {
+  max-height: 153px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.workplace-info-wrapper .workplace-info-block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 0 0 12px 0;
+}
+
+.workplace-info-wrapper .workplace-info-block .logo-item {
+  margin: 0 15px 0 0;
+}
+
+.workplace-info-wrapper .workplace-info-block .workplace-info-item .workplace-info-head {
+  line-height: 19px;
+  margin: 0 0 12px 0;
+}
+
+.workplace-info-wrapper .workplace-info-block .workplace-info-item .workplace-info-head p {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.workplace-info-wrapper .workplace-info-block .workplace-info-item .workplace-info {
+  display: flex;
+  align-items: center;
+}

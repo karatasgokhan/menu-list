@@ -1,0 +1,14 @@
+.breadcrumb-block {
+  display: flex;
+  align-items: center;
+  span {
+    margin: 3px 10px 0 10px;
+    font-size: 7px;
+  }
+  .breadcrumb-item {
+    a {
+      color: var(--orangeText);
+      font-size: 11px;
+    }
+  }
+}
